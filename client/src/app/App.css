@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
 @theme {
-  --color-vibrant-accent: #ff0077;
-  --font-manga-title: "Bangers", cursive;
+  --font-manga: "Bangers", cursive;
 }

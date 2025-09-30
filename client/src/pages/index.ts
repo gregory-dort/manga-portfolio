@@ -1,6 +1,6 @@
 import BioPage from "./BioPage";
 import ContactPage from "./ContactPage";
-import CoverPage from "./CoverPage";
+import HomePage from "./HomePage";
 import ProjectPage from "./ProjectPage";
 
-export { BioPage, ContactPage, CoverPage, ProjectPage };
+export { BioPage, ContactPage, HomePage, ProjectPage };
