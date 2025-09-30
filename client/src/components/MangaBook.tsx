@@ -10,8 +10,16 @@ const MangaBook = ({children}: MangaBookProps) => {
     const bookRef = useRef<FlipBook>(null);
     const [currentPage, setCurrentPage] = useState(0);
 
+    // Page Flipping Logic
+    const flipToNext = () => {
+        bookRef.current?.pageFlip()?.flipNext()
+    };
+    const flipToPrev = () => {
+        bookRef.current?.pageFlip()?.flipPrev()
+    };
+
     return(
-        <div className = "flex justify-center items-center h-screen bg-gray-50">
+        <div className = "flex flex-col items-center h-screen bg-gray-50">
             <HTMLFlipBook
                 ref={bookRef}
 
@@ -35,6 +43,14 @@ const MangaBook = ({children}: MangaBookProps) => {
                 >
                 {children}
             </HTMLFlipBook>
+            <div className = "flex space-x-4 mt-8">
+                <button onClick = {flipToPrev} className = "">
+                    &larr; Prev Chapter
+                </button>
+                <button onClick = {flipToNext} className = "">
+                    Next Chapter &rarr;
+                </button>
+            </div>
         </div>
     );
 };
