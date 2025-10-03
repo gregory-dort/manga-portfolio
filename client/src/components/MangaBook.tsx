@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import HTMLFlipBook from 'react-pageflip';
-import { FlipBook } from 'react-pageflip';
+import type { PageFlip } from 'page-flip';
 
 type MangaBookProps = {
     children: React.ReactNode;
@@ -29,10 +29,11 @@ const MangaBook = ({children}: MangaBookProps) => {
 
                 // Styling and Animation
                 size="fixed"
-                drawingTension={0.5}
+                drawShadow={true}
                 flippingTime={1500}
                 usePortrait={false}
                 showCover={true}
+                mobileScrollSupport={true}
 
                 // Event handler
                 onFlip={(e: number) => {
