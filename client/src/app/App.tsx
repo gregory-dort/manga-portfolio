@@ -1,10 +1,11 @@
 import './App.css'
+import { Home } from '../pages';
 
 function App() {
 
   return (
-    <div className = "bg-white w-screen">
-      
+    <div className = "bg-black">
+      <Home />
     </div>
   )
 }
