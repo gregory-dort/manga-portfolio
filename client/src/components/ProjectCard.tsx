@@ -1,4 +1,5 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
+import { getTechIcon } from './TechIcons';
 
 type ProjectCardProps = {
     title: string;
@@ -22,7 +23,7 @@ const ProjectCard = ({
         <motion.div
             whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="border border-gray-200 p-6 cursor-pointer relative overflow-hidden bg-white group"
+            className="border border-gray-200 p-6 rounded-md cursor-pointer relative overflow-hidden bg-white group"
             onClick={onSelect}
         >
             <div className = "mb-4">
@@ -37,13 +38,20 @@ const ProjectCard = ({
                 {title}
             </h3>
 
-            <p className="text-gray-600 mb-4 text-sm">{description}</p>
+            <p className="text-gray-600 mb-4 text-sm line-clamp-2"><u>Project Description:</u> {description}</p>
+            <p className="text-gray-600 hover:text-cyan-300 transition duration-300 mb-4 text-sm"><u>Live Demo:</u> {projectUrl}</p>
+            <p className="text-gray-600 hover:text-cyan-300 transition duration-300 mb-4 text-sm"><u>Link to Github Repository:</u> {repoUrl}</p>
 
-            <div className="flex flex-wrap gap-2 text-xs">
+            <div className="flex flex-wrap gap-2 text-xs mt-auto">
                 {techStack.map(tech => (
-                    <span key={tech} className="px-2 py-1 bg-gray-100 rounded">
-                        {tech}
-                    </span>
+                    <motion.div 
+                    key={tech} 
+                    className="flex items-center space-x-1 px-2 py-1 bg-gray-100 rounded"
+                    whileHover={{ y: -2 }}
+                    transition={{ type: "spring", stiffness: 500, damping: 20 }}
+                    >
+                        {getTechIcon(tech)} 
+                    </motion.div>
                 ))}
             </div>
         </motion.div>

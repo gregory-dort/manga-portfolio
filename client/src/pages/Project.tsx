@@ -1,35 +1,36 @@
+import {motion} from 'framer-motion';
 import { ProjectCard } from '../components';
 
 const Projects = [
     {
-        title: '',
+        title: 'PraxAssist',
         description: '',
         imageUrl: '',
-        altText: '',
+        altText: 'PraxAssist Logo',
         colorAccent: '',
         projectUrl: '',
-        repoUrl: '',
-        techStack: []
+        repoUrl: 'https://github.com/gregory-dort/prax-assist',
+        techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'TailwindCSS', 'Javascript']
     },
     {
-        title: '',
+        title: 'Prep Time Scheduler',
         description: '',
         imageUrl: '',
-        altText: '',
+        altText: 'Prep Time Logo',
         colorAccent: '',
         projectUrl: '',
-        repoUrl: '',
-        techStack: []
+        repoUrl: 'https://github.com/gregory-dort/prep-time',
+        techStack: ['React', 'Express', 'NodeJS', 'PostgreSQL', 'TailwindCSS', 'Typescript']
     },
     {
-        title: '',
+        title: 'Financial Planner',
         description: '',
         imageUrl: '',
-        altText: '',
+        altText: 'Financial Planner Logo',
         colorAccent: '',
         projectUrl: '',
-        repoUrl: '',
-        techStack: []
+        repoUrl: 'https://github.com/gregory-dort/fin-app',
+        techStack: ['React', 'FastAPI', 'NodeJS', 'PostgreSQL', 'TailwindCSS', 'Javascript', 'Python']
     }
 ]
 
@@ -43,7 +44,13 @@ const Project = () => {
             <h1 className = "text-6xl font-serif mb-16 text-center">The Project Collection</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {Projects.map((project, index) => (
-                    <ProjectCard
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered delay for cool effect
+                    >
+                        <ProjectCard
                         key={index}
                         title={project.title}
                         description={project.description}
@@ -55,6 +62,7 @@ const Project = () => {
                         techStack={project.techStack}
                         onSelect={() => handleProjectSelect(project.title)}
                     />
+                    </motion.div>
                 ))}
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+//import { useState, useEffect } from 'react';
 import { Navbar, Footer } from '../components';
 import type { SectionIDs } from '../components/Navbar';
 import { About, Contact, Experience, Project } from './index';
@@ -29,7 +29,6 @@ const Home = () => {
                     <Contact />
                 </section>
             </main>
-
             <Footer />
         </div>
     );
