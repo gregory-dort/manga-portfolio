@@ -5,11 +5,10 @@ const Projects = [
     {
         title: 'PraxAssist',
         description: '',
-        imageUrl: '',
+        imageUrl: '../src/assets/PraxLogin.png',
         altText: 'PraxAssist Logo',
-        colorAccent: '',
-        projectUrl: '',
-        repoUrl: 'https://github.com/gregory-dort/prax-assist',
+        projectUrl: '(Not Currently Live)',
+        repoUrl: '(https://github.com/gregory-dort/prax-assist)',
         techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'TailwindCSS', 'Javascript']
     },
     {
@@ -17,9 +16,8 @@ const Projects = [
         description: '',
         imageUrl: '',
         altText: 'Prep Time Logo',
-        colorAccent: '',
-        projectUrl: '',
-        repoUrl: 'https://github.com/gregory-dort/prep-time',
+        projectUrl: '(Not Currently Live)',
+        repoUrl: '(https://github.com/gregory-dort/prep-time)',
         techStack: ['React', 'Express', 'NodeJS', 'PostgreSQL', 'TailwindCSS', 'Typescript']
     },
     {
@@ -27,9 +25,8 @@ const Projects = [
         description: '',
         imageUrl: '',
         altText: 'Financial Planner Logo',
-        colorAccent: '',
-        projectUrl: '',
-        repoUrl: 'https://github.com/gregory-dort/fin-app',
+        projectUrl: '(Not Currently Live)',
+        repoUrl: '(https://github.com/gregory-dort/fin-app)',
         techStack: ['React', 'FastAPI', 'NodeJS', 'PostgreSQL', 'TailwindCSS', 'Javascript', 'Python']
     }
 ]
@@ -41,7 +38,14 @@ const Project = () => {
 
     return (
         <div id = "project" className = "min-h-[100vh]">
-            <h1 className = "text-6xl font-serif mb-16 text-center">The Project Collection</h1>
+            <motion.h1 
+                    className="text-6xl font-serif mb-16 text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    The Project Collection
+                </motion.h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {Projects.map((project, index) => (
                     <motion.div
@@ -56,7 +60,6 @@ const Project = () => {
                         description={project.description}
                         imageUrl={project.imageUrl}
                         altText={project.altText}
-                        colorAccent={project.colorAccent}
                         projectUrl={project.projectUrl}
                         repoUrl={project.repoUrl}
                         techStack={project.techStack}

@@ -1,3 +1,5 @@
+import { SectionCard } from '../components';
+
 const About = () => {
     return (
         <div>

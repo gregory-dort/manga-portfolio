@@ -4,20 +4,16 @@ import { getTechIcon } from './TechIcons';
 type ProjectCardProps = {
     title: string;
     description: string;
-
     imageUrl: string;
     altText: string;
-    colorAccent: string;
-
     projectUrl: string;
     repoUrl: string;
-
     techStack: string[];
     onSelect: () => void;
 };
 
 const ProjectCard = ({
-    title, description, imageUrl, altText, colorAccent, projectUrl, repoUrl, techStack, onSelect
+    title, description, imageUrl, altText, projectUrl, repoUrl, techStack, onSelect
 }: ProjectCardProps) => {
     return (
         <motion.div
@@ -34,11 +30,11 @@ const ProjectCard = ({
                 />
             </div>
 
-            <h3 className={`text-xl font-bold mb-1 ${colorAccent}`}>
-                {title}
+            <h3 className={`text-xl font-bold mb-1 text-gray-600`}>
+                <u>{title}</u>
             </h3>
 
-            <p className="text-gray-600 mb-4 text-sm line-clamp-2"><u>Project Description:</u> {description}</p>
+            <p className="text-gray-600 mb-4 text-sm line-clamp-2">Project Description: {description}</p>
             <p className="text-gray-600 hover:text-cyan-300 transition duration-300 mb-4 text-sm"><u>Live Demo:</u> {projectUrl}</p>
             <p className="text-gray-600 hover:text-cyan-300 transition duration-300 mb-4 text-sm"><u>Link to Github Repository:</u> {repoUrl}</p>
 
