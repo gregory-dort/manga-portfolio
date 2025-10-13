@@ -3,13 +3,13 @@ import { ProjectCard } from '../components';
 
 const Projects = [
     {
-        title: 'PraxAssist',
+        title: 'PraxAssist - Medical Chatbot',
         description: '',
         imageUrl: '../src/assets/PraxLogin.png',
         altText: 'PraxAssist Logo',
         projectUrl: '(Not Currently Live)',
-        repoUrl: '(https://github.com/gregory-dort/prax-assist)',
-        techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'TailwindCSS', 'Javascript']
+        repoUrl: 'https://github.com/gregory-dort/prax-assist',
+        techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'TailwindCSS', 'Javascript', 'Gemini']
     },
     {
         title: 'Prep Time Scheduler',
@@ -17,16 +17,16 @@ const Projects = [
         imageUrl: '',
         altText: 'Prep Time Logo',
         projectUrl: '(Not Currently Live)',
-        repoUrl: '(https://github.com/gregory-dort/prep-time)',
+        repoUrl: 'https://github.com/gregory-dort/prep-time',
         techStack: ['React', 'Express', 'NodeJS', 'PostgreSQL', 'TailwindCSS', 'Typescript']
     },
     {
-        title: 'Financial Planner',
+        title: 'Financial Budget Tracker',
         description: '',
         imageUrl: '',
         altText: 'Financial Planner Logo',
         projectUrl: '(Not Currently Live)',
-        repoUrl: '(https://github.com/gregory-dort/fin-app)',
+        repoUrl: 'https://github.com/gregory-dort/fin-app',
         techStack: ['React', 'FastAPI', 'NodeJS', 'PostgreSQL', 'TailwindCSS', 'Javascript', 'Python']
     }
 ]
@@ -52,7 +52,7 @@ const Project = () => {
                         key={index}
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered delay for cool effect
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                         <ProjectCard
                         key={index}

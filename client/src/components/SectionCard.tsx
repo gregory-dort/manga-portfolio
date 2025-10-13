@@ -12,10 +12,10 @@ const SectionCard = ({ children, className }: SectionCardProps) => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className={`
                 bg-white border border-gray-200 shadow-xl 
-                p-12 md:p-16 rounded-lg mx-auto max-w-7xl
+                p-12 md:p-16 rounded-xl mx-auto max-w-7xl
                 ${className || ''}
             `}
         >

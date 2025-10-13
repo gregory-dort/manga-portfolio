@@ -1,5 +1,5 @@
-import { FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
-import { SiTypescript, SiTailwindcss, SiPostgresql, SiJavascript, SiMongodb, SiExpress, SiFastapi } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaPython, FaGithub } from 'react-icons/fa';
+import { SiTypescript, SiTailwindcss, SiPostgresql, SiJavascript, SiMongodb, SiExpress, SiFastapi, SiGooglegemini } from 'react-icons/si';
 import type { IconType } from 'react-icons';
 
 export const TechIconMap: Record<string, IconType> = {
@@ -12,7 +12,9 @@ export const TechIconMap: Record<string, IconType> = {
     MongoDB: SiMongodb,
     Express: SiExpress,
     FastAPI: SiFastapi,
-    PostgreSQL: SiPostgresql
+    PostgreSQL: SiPostgresql,
+    Github: FaGithub,
+    Gemini: SiGooglegemini
 };
 
 export const getTechIcon = (tech: string) => {

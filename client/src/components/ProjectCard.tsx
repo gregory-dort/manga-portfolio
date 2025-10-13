@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { getTechIcon } from './TechIcons';
 
 type ProjectCardProps = {
@@ -35,8 +36,20 @@ const ProjectCard = ({
             </h3>
 
             <p className="text-gray-600 mb-4 text-sm line-clamp-2">Project Description: {description}</p>
-            <p className="text-gray-600 hover:text-cyan-300 transition duration-300 mb-4 text-sm"><u>Live Demo:</u> {projectUrl}</p>
-            <p className="text-gray-600 hover:text-cyan-300 transition duration-300 mb-4 text-sm"><u>Link to Github Repository:</u> {repoUrl}</p>
+            <a 
+                href={projectUrl} 
+                target="_blank" 
+                className="text-gray-600 hover:text-cyan-300 transition duration-300 mb-4 text-sm"
+            >
+                Live Demo: {projectUrl}<FaExternalLinkAlt size={15} />
+            </a>
+            <a
+                href={repoUrl}
+                target="_blank"
+                className="text-gray-600 hover:text-cyan-300 transition duration-300 mb-4 text-sm"
+            >
+                Link to Github Repository: <FaGithub size={20} />
+            </a>
 
             <div className="flex flex-wrap gap-2 text-xs mt-auto">
                 {techStack.map(tech => (
