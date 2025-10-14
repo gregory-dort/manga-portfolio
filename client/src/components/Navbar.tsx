@@ -1,4 +1,5 @@
 export interface SectionIDs {
+    hero: string;
     about: string;
     experience: string;
     contact: string;
@@ -25,6 +26,9 @@ const Navbar = ({sectionIds}: NavbarProps) => {
             <div className = "container mx-auto flex justify-between items-center py-4 px-4">
                 <h1 className = "text-3xl font-bold text-black font-serif">Gregory Dort</h1>
                 <div className = "space-x-8">
+                    <button onClick={() => scrollToSection(sectionIds.hero)} className="hover:text-cyan-300 transition duration-300">
+                        Hero
+                    </button>
                     <button onClick={() => scrollToSection(sectionIds.about)} className="hover:text-cyan-300 transition duration-300">
                         About
                     </button>

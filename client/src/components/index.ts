@@ -8,8 +8,7 @@ import WorkTimeline from './WorkTimeline';
 import ContactForm from './ContactForm';
 import Skills from './Skills';
 import SectionCard from './SectionCard';
-import Hero from './Hero';
 
 export { 
-    Navbar, Footer, ProjectCard, TechIcons, ProjectModal, EducationTimeline, WorkTimeline, ContactForm, Skills, SectionCard, Hero
+    Navbar, Footer, ProjectCard, TechIcons, ProjectModal, EducationTimeline, WorkTimeline, ContactForm, Skills, SectionCard
  };

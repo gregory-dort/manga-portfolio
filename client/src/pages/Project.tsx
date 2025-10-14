@@ -1,4 +1,4 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ProjectCard } from '../components';
 
 const Projects = [
@@ -14,7 +14,7 @@ const Projects = [
     {
         title: 'Prep Time Scheduler',
         description: '',
-        imageUrl: '',
+        imageUrl: '../src/assets/Pasta.jpg',
         altText: 'Prep Time Logo',
         projectUrl: '(Not Currently Live)',
         repoUrl: 'https://github.com/gregory-dort/prep-time',
@@ -23,7 +23,7 @@ const Projects = [
     {
         title: 'Financial Budget Tracker',
         description: '',
-        imageUrl: '',
+        imageUrl: '../src/assets/Money.jpg',
         altText: 'Financial Planner Logo',
         projectUrl: '(Not Currently Live)',
         repoUrl: 'https://github.com/gregory-dort/fin-app',

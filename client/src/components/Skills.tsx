@@ -24,7 +24,7 @@ const Skills = () => {
                         viewport={{ once: true, amount: 0.4 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h3 className="text-xl font-semibold mb-4 border-b pb-2">{category}</h3>
+                        <h3 className="text-xl items-center font-semibold mb-4 border-b pb-2">{category}</h3>
                         <div className="flex flex-wrap gap-3">
                             {skills.map(skill => (
                                 <span key={skill} className="px-3 py-1 text-sm font-medium text-gray-900 bg-cyan-100 rounded-full transition-colors hover:bg-cyan-300">
