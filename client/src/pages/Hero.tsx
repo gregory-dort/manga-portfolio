@@ -19,13 +19,19 @@ const itemVariants = {
 
 const Hero = () => {
     return (
-        <section id = 'hero' className = "h-screen items-center justify-center bg-gray-50 border-b border-gray-200">
+        <section id = 'hero' className = "h-screen flex flex-col items-center justify-center bg-gray-50 border-b border-gray-200">
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
                 className="max-w-4xl px-4"
             >
+                <motion.img
+                    variants={itemVariants}
+                    src="../assets/GregWC.JPG"
+                    alt="Profile Picture"
+                    className="w-72 h-72 mx-auto mb-4"
+                />
                 <motion.h1
                     variants={itemVariants} 
                     className="text-8xl md:text-9xl text-center font-serif font-light tracking-wider mb-4 text-gray-800"
